@@ -50,22 +50,25 @@ public class TicTacToe {
 
             if (line.equals("XXX")) {
                 winner = "X";
+                return winner;
             }
             else if (line.equals("OOO")) {
                 winner = "O";
+                return winner;
             } else {
                 for (int i = 0; i < board.length; i++) {
                     if (Arrays.asList(board).contains(String.valueOf(i+1))) {
                         break;
                     } else if (i == 8){
-                        winner = "draw";
+                        return winner = "draw";
                     }
                 }
             }
            
     
             }
-            return winner;
+            
+            return null;
     
 }
 }
